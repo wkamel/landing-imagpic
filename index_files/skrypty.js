@@ -1,0 +1,1 @@
+$(document).ready(function(){$('.hamburger').click(function(){$('.header-top-nav').slideToggle();});});window.onload=function(){var elevator=new Elevator({element:document.querySelector('.elevator-button'),duration:1000});}

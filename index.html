@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://frontend.enlive.pl/imagpicNS/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>imagpic</title>
+
+    <!-- Bootstrap -->
+    <link href="http://frontend.enlive.pl/imagpicNS/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://frontend.enlive.pl/imagpicNS/css/main.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+  <body>
+    
+    <header class="header relative" style="background-color:black;">
+        
+        
+        <div class="overay" style="position:absolute; width:100%; height:100%;top:0px; background-color:black;opacity:0.65; z-index:5"></div>
+        <video id="video-test" loop="loop" autoplay="true">
+            <source src="media/cloud.webm" type="video/webm">
+            <source src="media/cloud.mp4" type="video/mp4">
+        </video>
+
+    <!--<img src="landing_page.jpg" style="position:absolute; top:0px; left:50%; margin-left:-720px;opacity:0.6;" />-->
+        
+        <div style="position:relative; top:0px;left:0px;width:100%;height:100%;z-index:6;">
+      <div class="header-top container">
+
+        <a href="" class="css-text-36 css-white-color logo-link">imag<span class="bold css-green-color">pic</span></a>
+      
+        <button type="button" class="hamburger">
+    
+            <div class="hamburger-bg"></div>
+            <div class="hamburger-bg"></div>
+            <div class="hamburger-bg"></div>
+       
+        </button>
+          
+        <nav class="header-top-nav" id="mobile-nav">
+          
+          <ul class="css-text-16">  
+
+              <li><a onclick="$(&#39;#examples&#39;).animatescroll({scrollSpeed:600,easing:&#39;easeInSine&#39;});">Examples</a></li>
+              <li><a onclick="$(&#39;#how&#39;).animatescroll({scrollSpeed:600,easing:&#39;easeInSine&#39;});">How it works</a></li>
+              <li><a onclick="$(&#39;#pricing&#39;).animatescroll({scrollSpeed:600,easing:&#39;easeInSine&#39;});">Pricing</a></li>
+              <li class="sign-in"><a href="">Sign in</a></li>
+              <li class="sign-up css-green-color"><a href="">Sign up</a></li>
+
+          </ul>
+          
+        </nav>
+
+            
+
+      </div> <!-- koniec header top-->
+
+      <div class="container css-text-center top-text">
+
+        <h3>We are making advertising beautiful one image at the time.</h3>
+        <h4>Connect visitors on your site to items they want, seamlessly.</h4>
+
+        <button class="green-button">Signup for free</button>
+        <div class="clearfix"></div>
+        <small>14 day free trial. No credit card required.</small>
+
+      </div>
+
+      <div class="header-play-video container css-text-center">
+        
+      <!--<button class="button-play bold css-text-30 css-white-color">play video</button>-->
+
+      </div>
+            
+        </div>
+      
+   </header>  
+
+   <section class="section section-one relative" id="examples">
+
+     <div class="container">
+
+      <div class="container-top css-text-center">
+        <button class="section-title">EXAMPLES</button>
+        <h3>Picture is worth a 1000 words!</h3>
+        <h5>See how our clients use imagepic on their sites.</h5>
+      </div>
+
+        <ul class="choose-category">
+
+          <li class="" data-open-category="ptags"><a>Popular Tags</a></li>
+          <li data-open-category="pphotos" class=""><a>Popular Photos</a></li>
+          <li data-open-category="ntags" class="active"><a>New Tags</a></li>
+          <li data-open-category="nwebsites" class=""><a>New websites</a></li>
+          <li data-open-category="nphotos"><a>New Photos</a></li>
+
+        </ul>
+
+      </div>
+       
+       
+    <div class="gallery ptags" style="display: none;">
+       
+        <div class="row" id="popular_tags">
+        
+            <div class="col-md-4">
+            
+                    <div class="photo"> </div> <!--koniec photo -->
+            
+            </div>
+            
+            <div class="col-md-4">
+            
+                    <div class="photo"> </div>
+            
+            </div>
+            
+            <div class="col-md-4">
+            
+                <div class="photo">
+                </div>
+            
+            </div>
+        
+        </div>   
+       
+    
+       
+    </div>
+       
+    
+        <div class="gallery pphotos" style="display: none;">
+       
+            <div class="row"  id="popular_photos">
+
+                <div class="col-md-4">
+
+                        <div class="photo">
+                            
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+                        </div>
+                </div>
+
+            </div>
+            
+        </div>
+       
+            <div class="gallery ntags" style="display: block;">
+       
+            <div class="row" id="new_tags">
+
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+
+            </div>
+            
+        </div>
+       
+            <div class="gallery nwebsites" style="display: none;">
+       
+            <div class="row" id="new_sites">
+
+               <div class="col-md-4">
+
+                        <div class="photo">
+                            
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+                            
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+
+            </div>
+            
+        </div>
+       
+            <div class="gallery nphotos" style="display: none;">
+       
+            <div class="row" id="new_photos">
+
+              <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+                
+                <div class="col-md-4">
+
+                        <div class="photo">
+
+                        </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+   </section>
+
+   <section class="section section-two" id="how">
+
+     <div class="container">
+
+        <div class="container-top css-text-center">
+          <button class="section-title css-text-center">HOW IT WORKS</button>
+          <h3>Join the beautiful advertising movement!</h3>
+          <h5>We believe advertising should be all of informative, entertaining and practical. At imagpic we create technology that helps website owners make their advertising beautiful. See examples.
+          </h5>
+        </div>
+
+        <div id="row1" class="row">
+
+          <div class="col-md-6 box-image left-image"> 
+
+              <img src="./index_files/1.png">
+
+          </div>
+          <div class="col-md-6 col-sm-12 box-text">
+
+          <h6>Our technology</h6>
+          <p>Help your website visitors cut hours of research in their product research.
+          We help you connect users to items in images on your site.</p>
+
+          </div>
+        
+         </div>
+
+          <div id="row2" class="row">
+
+            <div class="col-md-6 box-image right-image"> 
+
+              <img src="./index_files/2.png">
+
+          </div>      
+              
+          <div class="col-md-6 col-sm-12 box-text">
+
+          <h6>How it works</h6>
+          <p>Our products lets you annotate images on their site in a creative
+          and useful way. It takes exactly 4 clicks to add a tag to any image. </p>
+
+          <p>You can monetize these images via hundreds of affiliate programs
+          on the web. Or you can tag your own store items.</p>
+
+          </div>
+
+              
+         </div>
+
+          <div id="row3" class="row">
+
+          <div class="col-md-6 box-image left-image"> 
+
+              <img src="./index_files/3.png">
+
+          </div>
+          <div class="col-md-6 col-sm-12 box-text">
+
+          <h6>Good or bad?</h6>
+          <p>We built a voting mechanism into each tag, you now know which
+          items your users like and dislike. </p>
+
+          <p>You can add more content that makes your site visitors happy.</p>
+
+          </div>
+         </div>
+
+          <div id="row4" class="row">
+              
+            <div class="col-md-6 box-image right-image"> 
+
+                  <img src="./index_files/4.png">
+
+              </div>
+
+              <div class="col-md-6 col-sm-12 box-text">
+
+              <h6>Lost &amp; found</h6>
+              <p>Each time a visitor votes on a tag, they have a option to save that
+              tag in imagpic. </p>
+              <p>We help you build return visitors base that are more likely to purchase
+                your products in the future</p>
+
+              </div>
+
+
+
+        </div>
+
+      
+
+    </div></section>
+
+     <section class="section section-three" id="pricing">
+
+     <div class="container">
+
+      <div class="container-top css-text-center">
+        <button class="section-title">PRICING</button>
+        <h3>Test driving is free forever!</h3>
+        <h5>Tagging of first 10 images on your site are free, and will be free forever. We think this helps small sites spread the word on BAM! We want to helps you test our product and achieve your goals.
+        </h5>
+      </div>
+
+
+        <div class="row price-cards">
+
+          <div class="col-md-3 col-sm-6">
+
+            <div class="price-card">
+
+              <div class="price-card-title">
+                <p>FREE</p>
+              </div>
+              <div class="price-card-content">
+
+                <p>$0</p>
+
+                <h5>I like to collect tags!</h5>
+                
+                <button class="green-button try-it-now">Try it now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3 col-sm-6">
+
+            <div class="price-card">
+
+              <div class="price-card-title">
+                <p>BASIC</p>
+              </div>
+              <div class="price-card-content">
+
+                <p>$39</p>
+                <h5>I have a website with<br>
+                    more than 100 pics to tag</h5>
+                <div class="clearfix"></div>
+                <button class="green-button try-it-now">Try it now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3 col-sm-6">
+
+            <div class="price-card">
+
+              <div class="price-card-title">
+                <p>ADVANCED</p>
+              </div>
+              <div class="price-card-content">
+
+                <p>$75</p>
+                <h5>I have a website with<br>
+                    101-200 pics to tag</h5>
+                  <div class="clearfix"></div>
+                <button class="green-button try-it-now">Try it now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3 col-sm-6">
+
+            <div class="price-card">
+
+              <div class="price-card-title">
+                <p>PRO</p>
+              </div>
+              <div class="price-card-content">
+
+                <p>$95</p>
+                <h5>I have more than<br>
+                        200+ pics to tag</h5>
+
+                <button class="green-button try-it-now">Try it now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div> <!-- koniec row z kartami -->
+
+         <p class="css-text-center css-text-18"><span style="opacity:0.5;">Do you have any questions?</span><a href="" class="link-in-text css-green-color"> Ask us now here.</a></p>
+
+
+
+      </div>
+
+      <div class="twitter-container relative">
+          
+          
+          <div class="container">
+              <div class="twitt-desc">
+
+            <h3>Our tweets</h3>
+                  <h5><span>Follow us on Twitter to have actual<br> informations!</span> <a href="" class="twitter-link">See us on Twitter</a></h5>
+          </div>
+          </div>
+        <div class="twitter-news">
+
+            <div id="1" class="col-md-4 news" style="background-color:#0fafe7;">
+
+              <div class="news-top">
+
+                  <img src="./index_files/twitt.png" alt="twitt-logo">
+                  <p class="twitt-date bold">2 dni temu</p>
+
+              </div>
+              <div class="news-content">
+
+                  <p class="news-text">Great new tag option added to our application!</p>
+                  <a href="" class="news-link">http://t.co/47984hud84</a>
+
+              </div>
+
+
+            </div>
+
+            <div id="2" class="col-md-4 news" style="background-color:#0c9fd3;">
+
+              <div class="news-top">
+
+                  <img src="./index_files/twitt.png" alt="twitt-logo">
+                  <p class="twitt-date bold">2 dni temu</p>
+
+              </div>
+              <div class="news-content">
+
+                  <p class="news-text">Great new tag option added to our application!</p>
+                  <a href="" class="news-link">http://t.co/47984hud84</a>
+
+              </div>
+
+
+            </div>
+
+            <div id="3" class="col-md-4 news" style="background-color:#0a99cb;">
+
+              <div class="news-top">
+
+                  <img src="./index_files/twitt.png" alt="twitt-logo">
+                  <p class="twitt-date bold">2 dni temu</p>
+
+              </div>
+              <div class="news-content">
+
+                  <p class="news-text">Great new tag option added to our application!</p>
+                  <a href="" class="news-link">http://t.co/47984hud84</a>
+
+              </div>
+
+
+            </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <footer>
+
+      <div class="container css-text-center">
+
+        <a href="" class="css-text-24 css-white-color logo-link">imag<span class="bold css-green-color">pic</span></a>
+
+        <ul class="social">
+
+          <li><a class="fb" href=""></a></li>
+          <li class="social-middle"><a class="twitt" href=""></a></li>
+          <li><a class="insta" href=""></a></li>
+
+        </ul>
+
+        <div class="separate"></div>
+
+        <nav class="footer-nav">
+
+          <ul>
+
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Contact us</a></li>
+
+          </ul>
+
+        </nav>
+
+        <p class="all-rights">All rights reserved Imagpic 2015</p>
+
+        <a style="visibility: visible; animation-name: fadeInUp;" href="http://www.enlive.pl/" title="Strony internetowe" class="enlive wow fadeInUp animated" target="_blank">design</a>
+
+      </div>
+
+    <button class="elevator-button transition-all-ease">Back to Top</button>
+
+    </footer>
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./index_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./index_files/jquery.easing.1.3.js"></script>
+    
+	<script type="text/javascript" src="./index_files/animatescroll.js"></script>
+    <script type="text/javascript" src="./index_files/elevator.min.js"></script>
+    
+    <script type="text/javascript" src="./index_files/skrypty.js"></script>
+       
+    <script>
+ 
+    
+        
+    /*inicjalizacja sliderów*/    
+    /*for (i=1;i<=5;i++) {
+    
+          $('.slider'+i).slick({
+                      dots: false,
+                      infinite: true,
+                      speed: 300,
+                      slidesToShow: 1,
+                      centerMode: true,
+                      variableWidth: true,
+                      responsive: [
+                            {
+                              breakpoint: 992,
+                              settings: {
+                                arrows: false,
+                                centerMode: true,
+                                slidesToShow: 1
+                              }
+                            }
+
+                          ]
+                  })
+    
+        } */
+        
+        /*menu section1*/
+        $('.choose-category li').on({
+          click: function() {
+
+            $('.choose-category li').removeClass('active');
+            $(this).addClass('active');
+            
+            var self = $(this),
+            _open_tab = self.data('open-category');
+              
+            $('.gallery').hide();
+                
+                $('.'+_open_tab).fadeIn('slow');
+            
+    
+          }
+        });
+        
+        
+       $('.button-play').click(function () {
+   if ($("#video-test").get(0).paused) {
+       $("#video-test").get(0).play();
+       $('.button-play').addClass('paused');
+       
+   } else {
+       $("#video-test").get(0).pause();
+       $('.button-play').removeClass('paused');
+  }
+});
+
+    
+
+       $(document).ready(function(){
+
+     $( '.mytooltip' ).mouseenter(function() {
+  
+         
+        
+        var click = $(this);
+        var tooltip = $(this).find('.tooltip-content');
+        
+        var photo = $('.photo');
+                    
+        var tooltipPosition = $(this);
+        var contentHeight = tooltip.height();
+        var contentWidth = tooltip.width();
+       var divHeight = photo.height();
+        var divWidth = photo.width(); 
+        
+        var x = tooltipPosition.position();
+
+        var y = x.left;
+        
+        
+        var suma = x.top+contentHeight;
+        var sumaWidth = x.left + contentWidth;
+         
+
+       
+        if(suma > divHeight){
+        
+             
+            
+            tooltip.css('margin-top', '-165px');
+            
+        
+        
+        }
+
+        if(sumaWidth >= divWidth){
+
+                tooltip.css('margin-left', '-250px');
+
+        }
+
+        if(contentHeight >= x.top) {
+
+                tooltip.css('margin-top', '-10px');
+
+        }
+
+        });
+     });
+
+
+       
+    </script>
+   
+       
+    <script>var  _delayTime=1600; _ipUcode="GBQTK6D2GU4SKMJR", _ipUurl="http://vps53002.vps.ovh.ca",_lpg=8; (function(){var a=document.createElement("script");a.async=!0;a.type="text/javascript";a.src=_ipUurl+"/static/ip-ucode.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();
+    (function(){var a=document.createElement("script");a.async=!0;a.type="text/javascript";a.src=_ipUurl+"/static/lp-ucode.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();
+    </script>
+       
+      
+  
+</body></html>
